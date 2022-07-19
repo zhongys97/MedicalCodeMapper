@@ -7,8 +7,7 @@ TEST_CODES = [10129005, 10137002]
 mapping_tsv_path = "resources/tls_Icd10cmHumanReadableMap_US1000124_20220301.tsv"
 snomed_relation_tsv_path = "resources/sct2_Relationship_Snapshot_US1000124_20220301.txt"
 
-mapping_df = pd.read_csv(mapping_tsv_path, sep='\t')
-snomed_term_relation_df = pd.read_csv(snomed_relation_tsv_path, sep='\t')
+
 
 
 def get_term_parents(term_relation_df, child_concept_id):
@@ -101,6 +100,9 @@ def map_snomedct_to_icd10cm(snomed_term_relation_df, snomedct_icd10cm_map_df, sn
 
 
 if __name__ == "__main__":
+
+    mapping_df = pd.read_csv(mapping_tsv_path, sep='\t')
+    snomed_term_relation_df = pd.read_csv(snomed_relation_tsv_path, sep='\t')
 
     ids = [10137002, 101621000119105, 291901000119109]
     for test_id in ids:

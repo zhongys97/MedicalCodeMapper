@@ -3,7 +3,6 @@ from utils.find_common_parent import find_common_parent
 
 mapping_file_path = "resources/icd9cm_icd10cm_table.csv"
 
-full_mapping_df = pd.read_csv(mapping_file_path, dtype=str)
 
 
 def find_matched_rows(full_mapping_df, icd9cm_code):
@@ -86,6 +85,8 @@ def get_icd10cm_codes(matched_df):
 
 
 if __name__ == "__main__":
+
+    full_mapping_df = pd.read_csv(mapping_file_path, dtype=str)
 
     matched = find_matched_rows(full_mapping_df, "80199")
     map_success, mapped_code = get_icd10cm_codes(matched)
