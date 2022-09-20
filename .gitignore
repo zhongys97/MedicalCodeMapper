@@ -1,3 +1,18 @@
 resources/sct2_Relationship_Snapshot_US1000124_20220301.txt
 
 resources/tls_Icd10cmHumanReadableMap_US1000124_20220301.tsv
+
+resources/multiple_icd10.csv
+
+
+resources/verification/
+
+real_patient_outputs/
+
+icd9cm_labeled_inputs.txt
+
+snomed_labeled_inputs.txt
+
+__pycache__
+
+.ipynb_checkpoints
